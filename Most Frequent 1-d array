@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void main()
+{
+    int i, n, array[10000], s, m, j, b;
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+    for (i = 0; i < n; i++)
+    {
+        s = 0;
+        for (j = i; j < n; j++)
+        {
+            if (array[j] == array[i])
+                s++;
+        }
+        if (s == m && array[i] < b)
+            b = array[i];
+        if (s > m)
+        {
+            m = s;
+            b = array[i];
+        }
+    }
+    printf("%d", b);
+}
